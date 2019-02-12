@@ -1,18 +1,37 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="html">
+  <main id="home">
+    <section>
+      <img src="https://placekitten.com/200/200" alt="Logo" @click="$router.push('/events')">
+    </section>
+    <section>
+      <a href="#" class="btn" @click="$router.push('/events')">Go to Events!</a>
+    </section>
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+  name: 'startpage'
 }
 </script>
+
+<style lang="scss">
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  section {
+    flex: 1;
+  }
+
+}
+
+
+
+
+
+</style>
