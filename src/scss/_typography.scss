@@ -1,9 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One":400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
-:root {
-  font-family: 'Poiret-One', cursive;
+h1 {
+  font-family: 'Poiret One', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 3rem;
+  color: rgb(107,51,101);
+  font-weight: bold;
+  text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+}
+
+h2 {
+  color: red;
+}
+
+h3 {
+  color: blue; 
+}
+
+h4 {
+  color: green; 
+}
+
+h5 {
+ color: yellow;
+}
+
+p {
+  color: peru;
+  font-size: 1.5rem;
+}
 
 
+
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

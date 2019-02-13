@@ -1,0 +1,26 @@
+%center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    &.btn {
+      width: 100%;
+      background: rgb(55,79,153);
+      @extend %center;
+      height: 3rem;
+      border-radius: 3px;
+      text-decoration: none; 
+      font-weight: 600;
+      text-transform: uppercase;
+      color: white;
+    
+      &:hover {
+        background: rgb(32, 62, 149);
+      }
+      &:active {
+        background: #222;
+      }
+    }
+}

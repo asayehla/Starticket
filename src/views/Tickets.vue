@@ -45,6 +45,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../scss/components';
+
 .ticket {
   max-width: 17rem;
 
