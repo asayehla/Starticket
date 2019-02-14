@@ -48,8 +48,8 @@ export default {
 @import '../scss/components';
 
 .ticket {
-  max-width: 17rem;
-
+  max-width: 20rem;
+  margin: 2em auto;
   background: red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -11,6 +11,8 @@ body {
   text-align: center;
   // color: pink;
   height: 100vh;
+  flex-direction: column;
+  display: flex;
 
   a {
     text-decoration: none;
@@ -22,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  flex: 1;
 
   a {
     font-weight: bold;
