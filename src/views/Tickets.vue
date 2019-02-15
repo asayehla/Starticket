@@ -52,8 +52,8 @@ export default {
 @import '../scss/components';
 
 .ticket {
-  max-width: 20rem;
-  margin: 2em auto;
+  max-width: 100%;
+  margin: 1.2em;
   background: red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -66,10 +66,11 @@ export default {
   }
   .what {
     grid-area: what;
-    background: khaki;
+    background: rgb(247, 242, 221);
   }
   .where {
     grid-area: where;
+    border-bottom: 2px dotted black;
     background:purple;
   }
   .when {
@@ -86,11 +87,12 @@ export default {
   }
   .info {
     grid-area: info;
-    background:gray;
+    background:rgb(247, 242, 221);
   }
   .barcode {
     grid-area: barcode;
-    background: yellow;
+    background: rgb(247, 242, 221);
+    padding: 0.3rem 0;
   }
 
 
