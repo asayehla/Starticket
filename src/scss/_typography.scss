@@ -6,37 +6,40 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 3rem;
-  color: rgb(107,51,101);
+  color: rgb(255, 124, 241);
   font-weight: bold;
   text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 h2 {
-  color: red;
+  color: rgb(221, 246, 255);
+  text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+  font-weight: lighter;
 }
 
 h3 {
-  color: blue; 
+  color: peru;
 }
 
 h4 {
-  color: green; 
+  color: green;
 }
 
 h5 {
- color: yellow;
+ color: rgb(18, 17, 59);
+ font-size: 1.2rem;
+ font-weight: lighter;
 }
 
 p {
-  color: peru;
+  color: black;
   font-size: 1.5rem;
 }
+
 .barcode {
   font-family: 'Libre Barcode 39 Text', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
  }
-
-
 
 :root {
   font-family: Arial, Helvetica, sans-serif;

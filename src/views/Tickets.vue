@@ -52,7 +52,7 @@ export default {
 
 .ticket {
   max-width: 100%;
-  margin: 1.2rem;
+  margin: 1.2em;
   background: red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
