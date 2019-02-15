@@ -32,7 +32,7 @@
     <h5>sittplats m.m.</h5>
   </div>
   <div class="barcode">
-    code
+    15GS5W
   </div>
 
 </article>

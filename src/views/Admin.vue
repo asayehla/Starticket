@@ -1,10 +1,6 @@
 <template lang="html">
-<main>
-
-
-
-  
-</main>
+    <main>
+    </main>
 </template>
 
 <script>
