@@ -7,6 +7,7 @@
     <section>
       ok logga/inte oki logga katter
     </section>
+
     <section class="grid-container">
       <div class="barcode">
         code
@@ -14,7 +15,6 @@
     <div class="btn">
       Verify ticket
     </div>
-
     </section>
 
   </main>
@@ -25,5 +25,7 @@ export default {}
 </script>
 
 <style lang="scss">
+@import '../scss/components';
+
 
 </style>
