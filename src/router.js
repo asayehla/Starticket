@@ -16,16 +16,15 @@ export default new Router({
       name: 'events',
       component: () => import('./views/Events.vue')
     },
-
      {
       path: '/buy',
       name: 'buy',
-            component: () => import('./views/Buy.vue')
+      component: () => import('./views/Buy.vue')
     },
     {
      path: '/tickets',
      name: 'tickets',
-           component: () => import('./views/Tickets.vue')
+     component: () => import('./views/Tickets.vue')
    },
    {
      path: '/verify',
@@ -36,7 +35,7 @@ export default new Router({
      path: '/admin',
      name: 'admin',
      component: () => import('./views/Admin.vue')
-   },
+   }
 
 
   ]
