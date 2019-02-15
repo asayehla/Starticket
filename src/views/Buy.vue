@@ -14,7 +14,7 @@
         <p>pris</p>
       </div>
       <div class="part1">
-        <p>-</p> 
+        <p>-</p>
       </div>
       <div class="part2">
         <p>antal</p>
@@ -24,13 +24,12 @@
       </div>
     </div>
   </section>
-<a href="#" class="btn">Take my money!</a>
+<a href="#" class="btn" @click=buy>Take my money!</a>
 </main>
 </template>
 
 <script>
-export default {
-}
+
 </script>
 
 <style lang="scss">
@@ -47,7 +46,7 @@ export default {
 
   .part1 {
     grid-area: part1;
-    background: khaki;    
+    background: khaki;
     padding: .3rem;
   }
   .part2 {

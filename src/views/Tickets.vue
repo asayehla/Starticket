@@ -7,7 +7,7 @@
     <h1> Name of event</h1>
   </div>
   <div class="where">
-    <h2>Where</h2>
+    <h2>Where - city</h2>
     <p>Exakt address</p>
   </div>
 
@@ -15,6 +15,7 @@
     <div class="when">
       <p>when</p>
       <h3>datum</h3>
+      <p>year</p>
     </div>
     <div class="from">
       <p>from</p>
@@ -28,10 +29,10 @@
 
   <div class="info">
     <p>info</p>
-    <h5>sittplats</h5>
+    <h5>sittplats m.m.</h5>
   </div>
   <div class="barcode">
-    //Barcode
+    code
   </div>
 
 </article>
@@ -41,7 +42,10 @@
 
 <script>
 export default {
+
+
 }
+
 </script>
 
 <style lang="scss">
