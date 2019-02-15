@@ -6,19 +6,27 @@
     <br><br>  &#x1f50d; förstoringsglas
     <section class="events">
 
-
-
     </section>
 
   </main>
 </template>
 
 <script>
-//import Event-item from '@/components/Eventitem';
+import eventItem from '@/components/event-item';
+
 
 export default {
   name:'events',
+  components: {
+        eventItem
+  },
   methods: {
+
+  },
+  computed: {
+    ticket() {
+      return this.$store.state.ticket;
+    }
   }
 }
 </script>

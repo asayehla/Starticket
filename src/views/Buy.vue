@@ -24,7 +24,7 @@
       </div>
     </div>
   </section>
-<a href="#" class="btn" @click=buy>Take my money!</a>
+<a href="#" class="btn">Take my money!</a>
 </main>
 </template>
 

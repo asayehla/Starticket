@@ -15,7 +15,6 @@
     <div class="when">
       <p>when</p>
       <h3>datum</h3>
-      <p>year</p>
     </div>
     <div class="from">
       <p>from</p>

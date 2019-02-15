@@ -1,21 +1,29 @@
 <template lang="html">
   <article class="event-item">
     <section class="datebox">
-        item.date
+      <h1>{{ticket.date}}</h1>
     </section>
     <section>
-      <h2>item.name</h2>
-      <p>item.plats</p>
-      <p>item.date</p>
+      <h2>{{ticket.name}}</h2>
+      <p>{{ticket.where}}</p>
+      <p>{{ticket.when}}</p>
     </section>
     <section>
-      <p>item.price</p>
+      <p>{{ticket.price}}</p>
     </section>
   </article>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'eventItem',
+    props: ['item'],
+    methods: {
+        addItem(item) {
+            this.$store.commit('addItem', item);
+        }
+    },
+}
 </script>
 
 <style lang="scss">
