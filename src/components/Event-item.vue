@@ -17,7 +17,7 @@
 <script>
 export default {
   name: 'eventItem',
-    props: ['item'],
+    props: ['ticket'],
     methods: {
         addItem(item) {
             this.$store.commit('addItem', item);
@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
   .event-item {
       display: flex;
-      border: 1px solid black;
+      border: 5px solid black;
       border-radius: 3px;
       padding: 0.5rem;
       margin-bottom: 5px;

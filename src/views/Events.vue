@@ -5,15 +5,16 @@
 
     <br><br>  &#x1f50d; förstoringsglas
     <section class="events">
-
+      <event-item v-for="ticket in ticket.name" :key="ticket.id" :ticket="ticket" />
     </section>
-
+<section>
+  {{ticket.name}}
+</section>
   </main>
 </template>
 
 <script>
 import eventItem from '@/components/event-item';
-
 
 export default {
   name:'events',
