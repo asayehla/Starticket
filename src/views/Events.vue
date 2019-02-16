@@ -5,10 +5,9 @@
 
     <br><br>  &#x1f50d; förstoringsglas
     <section class="events">
-      <event-item v-for="ticket in ticket.name" :key="ticket.id" :ticket="ticket" />
+      <event-item v-for="ticket in tickets" :key="ticket.id" :ticket="ticket" />
     </section>
 <section>
-  {{ticket.name}}
 </section>
   </main>
 </template>
@@ -25,8 +24,8 @@ export default {
 
   },
   computed: {
-    ticket() {
-      return this.$store.state.ticket;
+    tickets() {
+      return this.$store.state.tickets;
     }
   }
 }

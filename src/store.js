@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    ticket : {
+    tickets : [{
       id:"01",
       name: "Carola",
       where: "Globen",
@@ -19,7 +19,7 @@ export default new Vuex.Store({
       info: "I källaren av globen",
       code: "FR445W"
     },
-    ticket : {
+    {
       id:"04",
       name: "Uggla",
       where: "Globen",
@@ -31,7 +31,7 @@ export default new Vuex.Store({
       },
       info: "I källaren av globen",
       code: "FR445W"
-    }
+    }]
 
 
   },

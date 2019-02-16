@@ -41,6 +41,18 @@
             <td>12</td>
         </tr>
     </table>
+    <section class="add-event">
+    <h2>Add event</h2>
+    <form>
+        <input type="text" name="firstname" placeholder="Name">
+        <input type="text" name="where" placeholder="Where">
+        <input type="text" name="date" placeholder="Date">
+        <input type="number" name="from" placeholder="From time">
+        <input type="number" name="to" placeholder="To time">
+        <input type="text" name="seats" placeholder="#seats">
+        <input type="submit" value="Add the event">
+    </form> 
+    </section>
 
     </main>
 </template>
@@ -52,25 +64,6 @@ export default {
 
 <style lang="scss">
 
-// .container {
-//     max-width: 1000px;
-//     background: #eee;
-//     display: grid; 
-//     grid-template-columns: repeat(3, 1fr); 
-//     grid-template-rows: minmax(240px, auto);
-// }
-
-// table {
-//     background-color: peachpuff; 
-//     padding: 1rem;
-//     font-weight: bold;
-    
-//     th {
-//         color: violet;
-//         text-transform: uppercase;
-//         border-bottom: solid 1px white;
-//     }
-// }
 
 #customers {
   border-collapse: collapse;
@@ -92,5 +85,15 @@ export default {
   text-align: left;
   background-color: #4CAF50;
   color: white;
+}
+
+.add-event {
+    box-sizing: border-box;
+    max-width: 200px;
+    padding: 1rem 1rem;
+    background: rebeccapurple;
+    margin: 2em auto;
+    display: grid; 
+
 }
 </style>

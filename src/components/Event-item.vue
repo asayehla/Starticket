@@ -1,6 +1,6 @@
 <template lang="html">
   <article class="event-item">
-    <section class="datebox">
+    <section>
       <h1>{{ticket.date}}</h1>
     </section>
     <section>
@@ -27,12 +27,36 @@ export default {
 </script>
 
 <style lang="scss">
-  .event-item {
-      display: flex;
-      border: 5px solid black;
-      border-radius: 3px;
-      padding: 0.5rem;
-      margin-bottom: 5px;
-  }
+.menu-item {
+    display: flex; //allt kommer ligga på en rad
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: .5rem;
+    margin-bottom: .125rem;
 
+    section {
+        display:flex;
+        flex-direction: column; 
+        justify-content: center;
+        flex: 1;
+
+        &:first-child {
+            flex: 3;
+
+            h1 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                margin: 1rem 0 0 0;
+            }
+
+            p {
+                padding:0;
+                color: rgba(0,0,0, .8);
+                margin:0;
+                font-size: .8rem;
+
+            }
+        }
+    }
+}
 </style>
