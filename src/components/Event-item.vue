@@ -2,6 +2,7 @@
   <article class="event-item">
     <section class="date">
       <h1>{{ticket.when.date}}</h1>
+      <h6>{{ticket.when.year}}</h6>
     </section>
     <section class="info">
       <h2>{{ticket.name}}</h2>
@@ -33,27 +34,45 @@ export default {
 @import '../scss/components';
 
 .date {
-    border: green 2px solid;
+    border: white 1px solid;
+    border-radius: 8px;
     padding: 0;
+    background-color: rgb(26, 9, 33);
+
+    h6 {
+      margin: 0.3rem;
+      color: white;
+    }
 }
+
 .event-item {
-    border: 1px solid #eee;
-    border-radius: 3px;
+
+    border-radius: 8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin:1rem;
+    background-color: rgb(109, 53, 104);
 
     h1 {
         font-size: 2rem;
+        margin: 0.8rem 0.1rem 1.5rem 0.1rem;
     }
     h2 {
-        padding: 0;
+        text-align: left;
+        margin: 0.7rem;
     }
     p {
         font-size: 1rem;
         text-align: left;
-        margin: 0 1rem;
+        margin: 0 0.7rem;
     }
-
+    .price {
+      padding: 0 0.7rem;
+      margin-bottom: 0.4rem;
+      .btn {
+        border: 1px solid white;
+      }
+    }
 }
+
 </style>

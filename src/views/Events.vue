@@ -25,7 +25,7 @@ export default {
     tickets() {
       return this.$store.state.tickets;
     }
-  },
+  }
 
 
 }

@@ -12,6 +12,7 @@ export default new Vuex.Store({
       where: "Globen",
       price: 340,
       when: {
+        year: "2001",
         date: "23 Juli",
         from: "19:00",
         to: "22:00"
