@@ -7,8 +7,6 @@
     <section class="events">
       <event-item v-for="ticket in tickets" :key="ticket.id" :ticket="ticket" />
     </section>
-<section>
-</section>
   </main>
 </template>
 
@@ -27,7 +25,9 @@ export default {
     tickets() {
       return this.$store.state.tickets;
     }
-  }
+  },
+
+
 }
 </script>
 
