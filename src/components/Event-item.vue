@@ -12,7 +12,7 @@
     </section>
     <section class="price">
       <h3>{{ticket.price}}:-</h3>
-      <a href="#" class="btn">Köp!</a>
+      <a href="#" class="btn" @click="$router.push('/buy')">Köp!</a>
     </section>
   </article>
 </template>

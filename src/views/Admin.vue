@@ -88,9 +88,7 @@ export default {
 }
 
 .add-event {
-    box-sizing: border-box;
     max-width: 200px;
-    padding: 1rem 1rem;
     background: rebeccapurple;
     margin: 2em auto;
     display: grid; 
