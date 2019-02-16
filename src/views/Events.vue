@@ -2,7 +2,6 @@
   <main id="events">
     <h1>Events</h1>
     <input type="text" name="" value="" placeholder="Search for Event">
-
     <br><br>  &#x1f50d; förstoringsglas
     <section class="events">
       <event-item v-for="ticket in tickets" :key="ticket.id" :ticket="ticket" />
@@ -26,8 +25,6 @@ export default {
       return this.$store.state.tickets;
     }
   }
-
-
 }
 </script>
 

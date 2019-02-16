@@ -1,31 +1,31 @@
 <template>
   <main id="buy">
-  <section>
-    <h2 class="intro">Let's buy some tickets!</h2>
-  </section>
-  <section>
-    <h1>Konsertnamn</h1>
-    <h3>datum tid</h3>
-    <p>plats</p>
-  </section>
-  <section>
-    <div class="grid">
-      <div class="big">
-        <p>pris</p>
+    <section>
+      <h2 class="intro">Let's buy some tickets!</h2>
+    </section>
+    <section>
+      <h1>Konsertnamn</h1>
+      <h3>datum tid</h3>
+      <p>plats</p>
+    </section>
+    <section>
+      <div class="grid">
+        <div class="big">
+          <p>pris</p>
+        </div>
+        <div class="part1">
+          <p>-</p>
+        </div>
+        <div class="part2">
+          <p>antal</p>
+        </div>
+        <div class="part3">
+          <p>+</p>
+        </div>
       </div>
-      <div class="part1">
-        <p>-</p>
-      </div>
-      <div class="part2">
-        <p>antal</p>
-      </div>
-      <div class="part3">
-        <p>+</p>
-      </div>
-    </div>
-  </section>
-<a href="#" class="btn" @click="$router.push('/tickets')">Take my money!</a>
-</main>
+    </section>
+    <a href="#" class="btn" @click="$router.push('/tickets')">Take my money!</a>
+  </main>
 </template>
 
 <script>
@@ -64,9 +64,5 @@
     background: rebeccapurple;
     padding: .3rem;
   }
-
-
-
-
 
 </style>

@@ -37,10 +37,10 @@ export default {
   img {
     width: 16rem;
   }
-  &:last-child {
-    align-items: flex-end;
-    padding: 1rem;
-  }
+  // &:last-child {
+  //   align-items: flex-end;
+  //   padding: 1rem;
+  // }
 
 }
 

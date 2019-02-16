@@ -4,7 +4,7 @@
       <h1>{{ticket.when.date}}</h1>
       <h6>{{ticket.when.year}}</h6>
     </section>
-    <section class="info">
+    <section class="info" @click="$router.push('/buy')">
       <h2>{{ticket.name}}</h2>
       <p>Place:{{ticket.where}}</p>
       <p>From:{{ticket.when.from}}</p>
@@ -12,7 +12,7 @@
     </section>
     <section class="price">
       <h3>{{ticket.price}}:-</h3>
-      <a href="#" class="btn" @click="$router.push('/buy')">Köp!</a>
+      <!--<a href="#" class="btn" @click="$router.push('/buy')">Köp!</a>-->
     </section>
   </article>
 </template>
@@ -46,7 +46,6 @@ export default {
 }
 
 .event-item {
-
     border-radius: 8px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
