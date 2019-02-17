@@ -31,5 +31,4 @@ export default new Vuex.Store({
       ctx.commit('setEvents', events.data);
     }
   }
-
 })

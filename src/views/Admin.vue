@@ -3,6 +3,17 @@
     <section>
         <h1>Admin Page</h1>
     </section>
+    <section>
+        <div class="table">
+            <p>Name</p>
+                <!--<li v-for="(item,index) in items">
+                    {{item.text}}
+                </li>-->
+            <p>Where</p>
+            <p>Available Seats</p>
+            <p>Sold Tickets</p>
+        </div>
+    </section>
 
     <!--Form to add new events-->
     <section>
@@ -58,19 +69,36 @@ export default {
 </script>
 
 <style lang="scss">
+.table {
+    display: flex; 
+    justify-content: center; 
+    margin: 5px 30px;
+    background-color: rgb(0,0,65);
+    p {
+    font-size: 1rem;
+    color: #F56B9A;
+    width: 200px;
+    margin: 20px 0;
+    border-bottom: grey .1rem solid; 
+    text-align: left;
+  }
+  li {
+      color: red;
+  }
+}
 //Form - "Add Event"
 h3 {
     color: #F56B9A;
     font-size: 1.7rem;
-    display: grid;
+    display: flex;
     margin: 8px auto;
     box-sizing: border-box;
+    justify-content: center;
 }
 .add-event {
     background-color: rgb(0,0,65);
-    width: 90%;
     padding: 15px 0;
-    margin: 8px auto;
+    margin: 8px 30px;
     input  {
         min-width: 85%;
         border-radius: 3px;
