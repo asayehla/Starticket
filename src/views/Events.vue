@@ -4,7 +4,7 @@
     <input type="text" name="" value="" placeholder="Search for Event">
     <br><br>  &#x1f50d; förstoringsglas
     <section class="events">
-      <event-item v-for="ticket in tickets" :key="ticket.id" :ticket="ticket" />
+      <event-item v-for="event in events" :key="event.id" :event="event" />
     </section>
   </main>
 </template>

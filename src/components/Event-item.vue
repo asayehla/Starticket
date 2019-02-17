@@ -1,18 +1,18 @@
 <template lang="html">
   <article class="event-item">
     <section class="date">
-      <h1>{{ticket.when.date}}</h1>
-      <h6>{{ticket.when.year}}</h6>
+      <h1>{{event.when.date}}</h1>
+      <h6>{{event.when.year}}</h6>
     </section>
     <section class="info" @click="$router.push('/buy')">
       <h2>{{ticket.name}}</h2>
-      <p>Place:{{ticket.where}}</p>
-      <p>From:{{ticket.when.from}}</p>
-      <p>To:{{ticket.when.to}}</p>
+      <p>Place:{{event.where}}</p>
+      <p>From:{{event.when.from}}</p>
+      <p>To:{{event.when.to}}</p>
     </section>
     <section class="price">
-      <h3>{{ticket.price}}:-</h3>
-      <!--<a href="#" class="btn" @click="$router.push('/buy')">Köp!</a>-->
+      <h3>{{event.price}}:-</h3>
+      <!--<a href="#" class="btn" @click="$router.push('/buy')">more info</a>-->
     </section>
   </article>
 </template>
