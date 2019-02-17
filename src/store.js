@@ -22,13 +22,12 @@ export default new Vuex.Store({
       state.events = events;
     }
   },
-  
+
   actions: {
     //get events from API
     async getEvents(ctx){
       let events = await axios.get('http://localhost:3000/events');
-      console.log(events)
-
+      //console.log(events)
       ctx.commit('setEvents', events.data);
     }
   }

@@ -1,10 +1,10 @@
 <template lang="html">
-  <article class="event-item">
+  <article class="event-item" @click="selectEvent(event)">
     <section class="date">
       <h1>{{event.when.date}}</h1>
       <h6>{{event.when.year}}</h6>
     </section>
-    <section class="info" @click="$router.push('/buy')">
+    <section class="info">
       <h2>{{ticket.name}}</h2>
       <p>Place:{{event.where}}</p>
       <p>From:{{event.when.from}}</p>
@@ -12,18 +12,18 @@
     </section>
     <section class="price">
       <h3>{{event.price}}:-</h3>
-      <!--<a href="#" class="btn" @click="$router.push('/buy')">more info</a>-->
     </section>
   </article>
 </template>
 
 <script>
 export default {
-  name: 'eventItem',
-  props: ['ticket'],
+  name: 'event',
+  props: ['event'],
   methods: {
-    addItem(item) {
-      this.$store.commit('addItem', item);
+    selectEvent(event) {
+      this.$store.commit('selectEvent', event);
+      $router.push('/buy');
     },
 
   },
@@ -68,10 +68,7 @@ export default {
     .price {
       padding: 0 0.7rem;
       margin-bottom: 0.4rem;
-      .btn {
-        border: 1px solid white;
       }
-    }
 }
 
 </style>
