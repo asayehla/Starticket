@@ -6,14 +6,13 @@
     <section>
         <div class="table">
             <p>Name</p>
-                <!--<li v-for="(item,index) in items">
-                    {{item.text}}
-                </li>-->
             <p>Where</p>
             <p>Available Seats</p>
             <p>Sold Tickets</p>
-        </div>
+            </div>
+            <admin-item v-for="event in events" :key="event.id" :event="event" />
     </section>
+
 
     <!--Form to add new events-->
     <section>
@@ -46,6 +45,8 @@
 </template>
 
 <script>
+import adminItem from '@/components/admin-item';
+
 export default {
   data() {
     return {
@@ -57,6 +58,15 @@ export default {
         to: '',
         seats: '',
       }
+    }
+  },
+    name:'admin',
+  components: {
+        adminItem
+  },
+  computed: {
+    events() {
+      return this.$store.state.events;
     }
   },
 

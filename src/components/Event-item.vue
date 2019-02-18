@@ -6,7 +6,7 @@
     </section>
     <section class="info">
       <h2>{{event.name}}</h2>
-      <p>Place:{{event.where}}</p>
+      <p>Place:{{event.where.adress}}</p>
       <p>From:{{event.when.from}}</p>
       <p>To:{{event.when.to}}</p>
     </section>
