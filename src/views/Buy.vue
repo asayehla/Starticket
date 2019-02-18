@@ -1,11 +1,11 @@
 <template>
 <main id="buy">
-  <section>
+  <section v-if="event">
     <h2 class="intro">Let's buy some tickets!</h2>
   </section>
   <section>
     <h1>{{event.name}}</h1>
-    <h3>Date: {{event.when.date}}</h3>
+    <h3>Date: {{event.when.date}}</h3> <!--error when refresh-->
     <p>From: {{event.when.year}}</p>
     <p>From: {{event.when.from}}</p>
     <p>To: {{event.when.to}}</p>
@@ -15,37 +15,43 @@
   <section>
     <div class="grid">
       <div class="big">
-        <p>pris</p>
+        <p>{{event.price * amount}}</p>
       </div>
-      <div class="part1">
+      <div class="part1" @click="amount--">
         <p>-</p>
       </div>
       <div class="part2">
-        <p>antal</p>
+        <p>{{amount}}</p>
       </div>
-      <div class="part3">
+      <div class="part3" @click="amount++">
         <p>+</p>
       </div>
     </div>
   </section>
-  <a href="#" class="btn" @click="$router.push('/tickets')">Take my money!</a>
+  <a href="#" class="btn" @click="buy">Take my money!</a>
 </main>
 </template>
 
 <script>
-import ticket from '@/components/event-item';
 
 export default {
-  name:'event',
+  name:'buy',
+  data(){
+    return {
+      amount: 1,
+    }
+  },
   components: {
-        event
+        
   },
   methods: {
-
+    buy() {
+      this.$store.dispatch('buy',{event: this.event._id, amount: this.amount});
+    }
   },
   computed: {
-    event() {
-      return this.$store.state.events;
+    event() { 
+      return this.$store.state.event;
     }
   }
 }

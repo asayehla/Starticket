@@ -23,10 +23,9 @@ export default {
   methods: {
     selectEvent(event) {
       this.$store.commit('selectEvent', event);
-      $router.push('/buy');
-    },
-
-  },
+      this.$router.push('/buy');
+    }
+  }
 }
 </script>
 

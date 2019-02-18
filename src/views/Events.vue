@@ -3,7 +3,7 @@
     <h1>Events</h1>
     <input type="text" name="" value="" placeholder="Search for Event">
     <br><br>  &#x1f50d; 
-    <section class="events">
+    <section class="box32">
       <event-item v-for="event in events" :key="event.id" :event="event" />
     </section>
   </main>
