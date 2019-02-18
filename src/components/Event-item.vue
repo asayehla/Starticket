@@ -5,7 +5,7 @@
       <h6>{{event.when.year}}</h6>
     </section>
     <section class="info">
-      <h2>{{ticket.name}}</h2>
+      <h2>{{event.name}}</h2>
       <p>Place:{{event.where}}</p>
       <p>From:{{event.when.from}}</p>
       <p>To:{{event.when.to}}</p>
