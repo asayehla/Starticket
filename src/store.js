@@ -16,13 +16,15 @@ export default new Vuex.Store({
     selectEvent(state, event){
       state.event = event;
     },
-
+    setTickets(state, tickets){
+      state.tickets = tickets;
+    },
      //update events array with events
     setEvents(state, events){
       state.events = events;
     }
   },
-
+  
   actions: {
     //get events from API
     async getEvents(ctx){
@@ -32,7 +34,12 @@ export default new Vuex.Store({
     },
     async buy (ctx,buyData) {
       let tickets = await axios.post('http://localhost:3000/tickets', buyData);
-      //ctx.commit('setEvents', events.data);
+      ctx.commit('setTickets', tickets.data);
+      localStorage.setItem('tickets', JSON.stringify(tickets.data));
+    },
+    getTickets(ctx){
+      let tickets = localStorage.getItem('tickets');
+      ctx.commit('setTickets', JSON.parse(tickets));
     }
   }
 })

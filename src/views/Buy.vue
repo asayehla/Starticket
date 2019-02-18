@@ -5,12 +5,12 @@
   </section>
   <section>
     <h1>{{event.name}}</h1>
-    <h3>Date: {{event.when.date}}</h3> <!--error when refresh-->
+    <!--<h3>Date: {{event.when.date}}</h3> <!--error when refresh
     <p>From: {{event.when.year}}</p>
     <p>From: {{event.when.from}}</p>
     <p>To: {{event.when.to}}</p>
     <p>Where: {{event.where.adress}} </p>
-    <p>Info: {{event.where.venue}}</p>
+    <p>Info: {{event.where.venue}}</p>-->
   </section>
   <section>
     <div class="grid">
@@ -47,6 +47,7 @@ export default {
   methods: {
     buy() {
       this.$store.dispatch('buy',{event: this.event._id, amount: this.amount});
+      this.$router.push('/tickets');
     }
   },
   computed: {
