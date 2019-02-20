@@ -4,16 +4,19 @@
       <img src="https://placekitten.com/100/100" alt="Logo" @click="$router.push('/events')">
       <h1>STAFF</h1>
     </section>
+
     <section class="verification" v-if="verification">
-      <h1 v-if="verification.verified">Valid, OK </h1>
+      <h1>{{verification}}</h1>
       <img src="https://placekitten.com/200/200" class="ok" alt="ok /ej oki katt" @click="$router.push('/events')">
-      <h1 v-if="!verification.verified">Not OK</h1>
-      {{verification.msg}}
+
     </section>
+
     <section class="verify">
       <input type="text" class="barcode" name="code" :value="code.toUpperCase()" @input="code =$event.target.value.toUpperCase()" :maxlength="codeLength" />
       <a href="#" class="btn" @click="verifyTicket"><h2>Verify ticket</h2></a>
     </section>
+
+
   </main>
 </template>
 
@@ -32,8 +35,8 @@ export default {
     }
   },
   methods: {
-    verifyTicket() {
-      this.$store.dispatch('verifyTicket', this.code);
+    async verifyTicket() {
+      await this.$store.dispatch('verifyTicket', this.code);
     }
   }
 
