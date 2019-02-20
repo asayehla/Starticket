@@ -4,11 +4,10 @@
       <h1>{{event.when.date}}</h1>
       <h6>{{event.when.year}}</h6>
     </section>
-    <section class="info">
+    <section class="nameVenue">
       <h2>{{event.name}}</h2>
-      <p>Place: {{event.where.venue}}</p>
-      <p>From: {{event.when.from}}</p>
-      <p>To: {{event.when.to}}</p>
+      <p>{{event.where.venue}}</p>
+      <p>{{event.when.from}} - {{event.when.to}}</p>
     </section>
     <section class="price">
       <h5>{{event.price}}</h5><p>SEK</p>
@@ -33,27 +32,26 @@ export default {
 @import '../scss/components';
 
 .date {
-    border: white 1px solid;
-    border-radius: 8px;
-    padding: 0;
+    border: rgb(217, 217,217) 1px solid;
     background-color: rgb(26, 9, 33);
+    border-radius: 5px;
+    padding: 0;
 
     h6 {
         margin: 0.1rem;
-        color: white;
-    }
+        }
 }
-
+//rgb(56, 82, 158);
 .event-item {
-    border-radius: 8px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     margin: 1rem;
-    background-color: rgb(109, 53, 104);
+
 
     h1 {
-        font-size: 1.4rem;
-        margin: 0.8rem 0.1rem 1.5rem;
+        font-size: 1.2rem;
+        margin: 0.8rem 0.1rem;
     }
     h2 {
         text-align: left;
@@ -71,15 +69,22 @@ export default {
         }
 
     }
+    .nameVenue{
+      border-bottom: 1px rgb(217, 217,217) solid;
+    }
     .price {
+
+    border-bottom: 1px rgb(217, 217,217) solid;
+
         h5 {
+            text-align:right;
             padding: 0 0.7rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
         }
         p {
-            text-align: center;
+            text-align: right;
             padding: 0 0.7rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.3rem;
         }
     }
 }

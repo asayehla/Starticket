@@ -37,8 +37,9 @@ export default {
 
 input {
   font-size: 1rem;
-  padding: 0.5rem;
-  color: rgb(107,51,101);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  color: rgb(217, 217, 217);
 }
 
 </style>

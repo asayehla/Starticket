@@ -1,36 +1,38 @@
 <template>
 <article class="ticket">
   <div class="what">
+    <p>WHAT</p>
     <h1>{{ticket.event.name}}</h1>
   </div>
 
   <div class="where">
+    <p>WHERE</p>
     <h3>{{ticket.event.where.venue}}</h3>
-    <p>{{ticket.event.where.adress}}</p>
+    <h5>{{ticket.event.where.adress}}</h5>
   </div>
 
   <div class="when">
     <p>WHEN</p>
-    <h4>{{ticket.event.when.date}}</h4>
+    <h3>{{ticket.event.when.date}}</h3>
   </div>
 
   <div class="from">
     <p>FROM</p>
-    <h4>{{ticket.event.when.from}}</h4>
+    <h3>{{ticket.event.when.from}}</h3>
   </div>
 
   <div class="to">
     <p>TO</p>
-    <h4>{{ticket.event.when.to}}</h4>
+    <h3>{{ticket.event.when.to}}</h3>
   </div>
 
-  <div class="info">
+  <div class="infoticket">
     <p>INFO</p>
-    <h5>{{ticket.event.info}}</h5>
+    <p>{{ticket.event.info}}</p>
   </div>
 
   <div class="barcode">
-    {{ticket.event.code}}
+    {{ticket.code}}
   </div>
 </article>
 </template>
@@ -45,40 +47,71 @@ export default {
 <style lang="scss">
 .ticket {
     max-width: 100%;
-    margin: 1.8rem;
-    background:rgb(217, 217, 217);
+    margin: 3.1rem;
+    background: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "what what what" "where where where" "when from to" "info info info" "barcode barcode barcode";
-}
+    grid-template-areas:
+      "what what what"
+     "where where where"
+     "when from to"
+     "info info info"
+     "barcode barcode barcode";
+    color: rgb(18, 17, 59);
+    border-radius: 5px;
+    box-shadow: 5px 5px 0 0 rgb(153, 127, 171),
+     10px 10px 0 0 rgb(103, 51, 121),
+     5px 5px 0 5px rgba(0,0,0,0);
 
-.what {
-    grid-area: what;
-}
+    .what {
+        grid-area: what;
+        border-bottom: 1px dotted rgb(18, 17, 59);
+    }
 
-.where {
-    grid-area: where;
-    border-bottom: 2px dotted black;
-}
+    .where {
+        grid-area: where;
+        border-bottom: 1px dotted rgb(18, 17, 59);
+    }
 
-.when {
-    grid-area: when;
-}
+    .when {
+        grid-area: when;
+    }
 
-.from {
-    grid-area: from;
-}
+    .from {
+        grid-area: from;
+        border-left: 1px dotted rgb(18, 17, 59);
+        border-right: 1px dotted rgb(18, 17, 59);
+    }
 
-.to {
-    grid-area: to;
-}
+    .to {
+        grid-area: to;
+    }
 
-.info {
-    grid-area: info;
-}
+    .infoticket {
+        grid-area: info;
+        border-top: 1px dotted rgb(18, 17, 59);
+        border-bottom: 1px dotted rgb(18, 17, 59);
+    }
 
-.barcode {
-    grid-area: barcode;
-    padding: 0.3rem 0;
+    .barcode {
+        grid-area: barcode;
+        padding: 1rem 1rem 1rem 0;
+    }
+
+    p {
+        font-size: 0.8rem;
+        text-align: left;
+        margin-left: 1rem;
+    }
+
+    h3 {
+        text-align: left;
+        margin-left: 1rem;
+    }
+    h5 {
+        text-align: left;
+        margin-left: 1rem;
+    }
+
 }
 </style>

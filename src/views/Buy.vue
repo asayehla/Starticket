@@ -7,12 +7,12 @@
       <h1>{{event.name}}</h1>
       <p><!--{{event.when.year}}--> </p>
       <h3>
-        {{event.when.date}}
-        {{event.when.from}} - {{event.when.to}}</h3>
+        {{event.when.date}}  {{event.when.from}} - {{event.when.to}}
+      </h3>
     </section>
     <section class="information">
-      <h4>@: {{event.where.venue}} {{event.where.adress}} </h4>
-      <p class="information">Info: {{event.info}}</p>
+      <h2>@: {{event.where.venue}} {{event.where.adress}} </h2>
+      <p class="information">information: {{event.info}}</p>
     </section>
     <section>
       <div class="grid">
@@ -92,17 +92,13 @@ export default {
     padding: 0.2rem;
     border-bottom: 1px white solid;
 }
-  p {
-    color: white;
-    font-weight: bold;
-  }
 
 .information {
     margin: 0 15%;
+
     p {
         margin: 0;
         padding: 0 1.3rem;
-        font-size: 1rem;
         text-align: left;
     }
 }
