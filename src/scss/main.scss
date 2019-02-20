@@ -1,15 +1,12 @@
-
 @import './typography';
-
 
 body {
   margin: 0;
-  background-color:rgb(67,25,81);
+  background-color: rgb(67,25,81);
 }
 
 #app {
   text-align: center;
-  // color: pink;
   height: 100vh;
   flex-direction: column;
   display: flex;
@@ -17,8 +14,8 @@ body {
   a {
     text-decoration: none;
   }
-
 }
+
 #nav {
   padding: 30px;
   display: flex;
@@ -29,12 +26,9 @@ body {
   a {
     font-weight: bold;
     color: rgb(211,211,211);
+
     &.router-link-exact-active {
       color: rgb(132,194,224);
     }
   }
-}
-
-h1 {
-  font-family: 'Poiret One', cursive;
 }

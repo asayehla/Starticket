@@ -1,92 +1,84 @@
 <template>
-    <article class="ticket">
-      <div class="what">
-        <h1>{{ticket.event.name}}</h1> <!--byt ut till {{ticket.event.name}}-->
-      </div>
+<article class="ticket">
+  <div class="what">
+    <h1>{{ticket.event.name}}</h1>
+  </div>
 
-      <div class="where">
-        <h2>Where - city</h2>
-        <p>{{ticket.event.adress}}</p>
-      </div>
+  <div class="where">
+    <h3>{{ticket.event.where.venue}}</h3>
+    <p>{{ticket.event.where.adress}}</p>
+  </div>
 
-      <div class="when">
-        <p>when</p>
-        <h3>datum</h3>
-      </div>
+  <div class="when">
+    <p>WHEN</p>
+    <h4>{{ticket.event.when.date}}</h4>
+  </div>
 
-      <div class="from">
-        <p>from</p>
-        <h3>tid</h3>
-      </div>
+  <div class="from">
+    <p>FROM</p>
+    <h4>{{ticket.event.when.from}}</h4>
+  </div>
 
-      <div class="to">
-        <p>to</p>
-        <h3>tid</h3>
-      </div>
+  <div class="to">
+    <p>TO</p>
+    <h4>{{ticket.event.when.to}}</h4>
+  </div>
 
-      <div class="info">
-        <p>info</p>
-        <h5>{{ticket.event.info}}</h5>
-      </div>
+  <div class="info">
+    <p>INFO</p>
+    <h5>{{ticket.event.info}}</h5>
+  </div>
 
-      <div class="barcode">
-        {{ticket.event.code}}
-      </div>
-    </article>
+  <div class="barcode">
+    {{ticket.event.code}}
+  </div>
+</article>
 </template>
 
 <script>
 export default {
-    name: 'ticket',
-    props: ['ticket']
+  name: 'ticket',
+  props: ['ticket']
 }
 </script>
 
 <style lang="scss">
-
 .ticket {
-  max-width: 100%;
-  margin: 1.2em;
-  background: red;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-  "what what what"
-  "where where where"
-  "when from to"
-  "info info info"
-  "barcode barcode barcode"
-  }
-  .what {
+    max-width: 100%;
+    margin: 1.8rem;
+    background:rgb(217, 217, 217);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "what what what" "where where where" "when from to" "info info info" "barcode barcode barcode";
+}
+
+.what {
     grid-area: what;
-    background: rgb(247, 242, 221);
-  }
-  .where {
+}
+
+.where {
     grid-area: where;
     border-bottom: 2px dotted black;
-    background:purple;
-  }
-  .when {
+}
+
+.when {
     grid-area: when;
-    background:blue;
-  }
-  .from {
+}
+
+.from {
     grid-area: from;
-    background:red;
-  }
-  .to {
+}
+
+.to {
     grid-area: to;
-    background:green;
-  }
-  .info {
+}
+
+.info {
     grid-area: info;
-    background:rgb(247, 242, 221);
-  }
-  .barcode {
+}
+
+.barcode {
     grid-area: barcode;
-    background: rgb(247, 242, 221);
     padding: 0.3rem 0;
-  }
-
-
+}
 </style>

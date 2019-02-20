@@ -1,42 +1,43 @@
-<template>
-<main id="buy">
-  <section v-if="event">
-    <h2 class="intro">Let's buy some tickets!</h2>
-  </section>
-  <section>
-    <h1>{{event.name}}</h1>
-    <h3>Date: {{event.when.date}}</h3>
-    <p>From: {{event.when.year}}</p>
-    <p>From: {{event.when.from}}</p>
-    <p>To: {{event.when.to}}</p>
-    <p>Where: {{event.where.adress}} </p>
-    <p>Info: {{event.where.venue}}</p>-->
-  </section>
-  <section>
-    <div class="grid">
-      <div class="big">
-        <p>{{event.price * amount}}</p>
+  <template>
+  <main id="buy">
+    <section v-if="event">
+      <h4 class="intro">Let's buy some tickets!</h4>
+    </section>
+    <section>
+      <h1>{{event.name}}</h1>
+      <p><!--{{event.when.year}}--> </p>
+      <h3>
+        {{event.when.date}}
+        {{event.when.from}} - {{event.when.to}}</h3>
+    </section>
+    <section class="information">
+      <h4>@: {{event.where.venue}} {{event.where.adress}} </h4>
+      <p class="information">Info: {{event.info}}</p>
+    </section>
+    <section>
+      <div class="grid">
+        <div class="big">
+          <p>{{event.price * amount}}</p>
+        </div>
+        <div class="part1" @click="amount--">
+          <p>-</p>
+        </div>
+        <div class="part2">
+          <p>{{amount}}</p>
+        </div>
+        <div class="part3" @click="amount++">
+          <p>+</p>
+        </div>
       </div>
-      <div class="part1" @click="amount--">
-        <p>-</p>
-      </div>
-      <div class="part2">
-        <p>{{amount}}</p>
-      </div>
-      <div class="part3" @click="amount++">
-        <p>+</p>
-      </div>
-    </div>
-  </section>
-  <a href="#" class="btn" @click="buy">Take my money!</a>
-</main>
+    </section>
+    <a href="#" class="btn" @click="buy">Take my money!</a>
+  </main>
 </template>
 
 <script>
-
 export default {
-  name:'buy',
-  data(){
+  name: 'buy',
+  data() {
     return {
       amount: 1,
     }
@@ -46,7 +47,10 @@ export default {
   },
   methods: {
     buy() {
-      this.$store.dispatch('buy',{event: this.event._id, amount: this.amount});
+      this.$store.dispatch('buy', {
+        event: this.event._id,
+        amount: this.amount
+      });
       this.$router.push('/tickets');
     }
   },
@@ -60,6 +64,7 @@ export default {
 
 <style lang="scss">
 @import '../scss/components';
+#buy {
 .grid {
     border: 2px solid white;
     display: grid;
@@ -70,22 +75,37 @@ export default {
 
 .part1 {
     grid-area: part1;
-    background: khaki;
-    padding: 0.3rem;
+    padding: 0.2rem;
+    border-right: 1px white solid;
 }
 .part2 {
     grid-area: part2;
-    background: red;
-    padding: 0.3rem;
+    padding: 0.2rem;
 }
 .part3 {
     grid-area: part3;
-    background: peachpuff;
-    padding: 0.3rem;
+    padding: 0.2rem;
+    border-left: white solid 1px;
 }
 .big {
     grid-area: big;
-    background: rebeccapurple;
-    padding: 0.3rem;
+    padding: 0.2rem;
+    border-bottom: 1px white solid;
+}
+  p {
+    color: white;
+    font-weight: bold;
+  }
+
+.information {
+    margin: 0 15%;
+    p {
+        margin: 0;
+        padding: 0 1.3rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
 }
 </style>

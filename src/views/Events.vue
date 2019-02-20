@@ -1,9 +1,8 @@
 <template lang="html">
   <main id="events">
     <h1>Events</h1>
-    <input type="text" name="" value="" placeholder="Search for Event">
-    <br><br>  &#x1f50d; 
-    <section class="box32">
+    <input type="text" name="search" v-model="filter" placeholder="Search for Event">
+    <section>
       <event-item v-for="event in events" :key="event.id" :event="event" />
     </section>
   </main>
@@ -14,6 +13,11 @@ import eventItem from '@/components/event-item';
 
 export default {
   name:'events',
+  data() {
+    return {
+      filter: null
+    }
+  },
   components: {
         eventItem
   },
@@ -32,10 +36,9 @@ export default {
 @import '../scss/components';
 
 input {
-  font-size: 1.3rem;
-  padding: 0.6rem;
+  font-size: 1rem;
+  padding: 0.5rem;
   color: rgb(107,51,101);
-
 }
 
 </style>

@@ -6,12 +6,12 @@
     </section>
     <section class="info">
       <h2>{{event.name}}</h2>
-      <p>Place:{{event.where.adress}}</p>
-      <p>From:{{event.when.from}}</p>
-      <p>To:{{event.when.to}}</p>
+      <p>Place: {{event.where.venue}}</p>
+      <p>From: {{event.when.from}}</p>
+      <p>To: {{event.when.to}}</p>
     </section>
     <section class="price">
-      <h3>{{event.price}}:-</h3>
+      <h5>{{event.price}}</h5><p>SEK</p>
     </section>
   </article>
 </template>
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import '../scss/components';
 
 .date {
@@ -39,35 +39,48 @@ export default {
     background-color: rgb(26, 9, 33);
 
     h6 {
-      margin: 0.3rem;
-      color: white;
+        margin: 0.1rem;
+        color: white;
     }
 }
 
 .event-item {
     border-radius: 8px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin:1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 1rem;
     background-color: rgb(109, 53, 104);
 
     h1 {
-        font-size: 2rem;
-        margin: 0.8rem 0.1rem 1.5rem 0.1rem;
+        font-size: 1.4rem;
+        margin: 0.8rem 0.1rem 1.5rem;
     }
     h2 {
         text-align: left;
-        margin: 0.7rem;
+        padding: 0.3rem 0.4rem 0.1rem 0.5rem;
+        margin: 0;
     }
     p {
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: left;
-        margin: 0 0.7rem;
+        padding: 0 0 0 0.5rem;
+        margin: 0;
+
+        &:last-child {
+            padding-bottom: 0.1rem;
+        }
+
     }
     .price {
-      padding: 0 0.7rem;
-      margin-bottom: 0.4rem;
-      }
+        h5 {
+            padding: 0 0.7rem;
+            margin-bottom: 0.4rem;
+        }
+        p {
+            text-align: center;
+            padding: 0 0.7rem;
+            margin-bottom: 0.4rem;
+        }
+    }
 }
-
 </style>
