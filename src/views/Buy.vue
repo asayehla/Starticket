@@ -5,7 +5,7 @@
   </section>
   <section>
     <h1>{{event.name}}</h1>
-    <!--<h3>Date: {{event.when.date}}</h3> <!--error when refresh
+    <h3>Date: {{event.when.date}}</h3>
     <p>From: {{event.when.year}}</p>
     <p>From: {{event.when.from}}</p>
     <p>To: {{event.when.to}}</p>
@@ -42,7 +42,7 @@ export default {
     }
   },
   components: {
-        
+
   },
   methods: {
     buy() {
@@ -51,7 +51,7 @@ export default {
     }
   },
   computed: {
-    event() { 
+    event() {
       return this.$store.state.event;
     }
   }

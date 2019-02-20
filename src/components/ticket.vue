@@ -6,14 +6,14 @@
 
       <div class="where">
         <h2>Where - city</h2>
-        <p>Exakt address</p>
+        <p>{{ticket.event.adress}}</p>
       </div>
 
       <div class="when">
         <p>when</p>
         <h3>datum</h3>
       </div>
-      
+
       <div class="from">
         <p>from</p>
         <h3>tid</h3>
@@ -26,11 +26,11 @@
 
       <div class="info">
         <p>info</p>
-        <h5>sittplats m.m.</h5>
+        <h5>{{ticket.event.info}}</h5>
       </div>
-          
+
       <div class="barcode">
-        15GS5W
+        {{ticket.event.code}}
       </div>
     </article>
 </template>
