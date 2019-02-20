@@ -20,13 +20,15 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+        <section>
             <aside class="form">
-                <input type="text" placeholder="event name" v-model="newEvent.name">
-                <input type="text" placeholder="event location" v-model="newEvent.where.venue">
-                <input type="text" placeholder="start time" v-model="newEvent.when.from">
-                <input type="text" placeholder="end time" v-model="newEvent.when.to">
-                <input type="text" placeholder="price" v-model="newEvent.price">
-                <input type="number" placeholder="total tickets" v-model="newEvent.tickets.available">
+                <input type="text" placeholder="Event Name" v-model="newEvent.name">
+                <input type="text" placeholder="Event Location" v-model="newEvent.where.venue">
+                <input type="text" placeholder="From" v-model="newEvent.when.from">
+                <input type="text" placeholder="To" v-model="newEvent.when.to">
+                <input type="text" placeholder="Price" v-model="newEvent.price">
+                <input type="number" placeholder="Total Tickets" v-model="newEvent.tickets.available">
                 <a href="#" class="btn" @click="createEvent">Create event</a>
             </aside>
         </section>
@@ -65,7 +67,7 @@ export default {
             this.$store.dispatch('getEvents');
         
         } catch(err) {
-            alert('Något sket sig!');
+            alert('Error, unable to send new event');
         }
 
         }
@@ -80,46 +82,36 @@ export default {
 
 <style lang="scss">
 #admin {
-    background:rgb(0,0,65);
+    margin: 0;
     display: flex;
-    justify-content: center;
-
-    .logo {
-        position: fixed;
-        margin: 1rem; 
-        width: 2rem;
-        left: 0;
-    }
+    flex-direction: column;
+    align-items: center; 
 
     .container {
         display: flex; 
         grid-template-columns: 4fr 1fr; 
         max-width: 1000px;
-        width: 100%; 
         color: white;
 
         table {
-            background: darkblue; 
+            background: rgb(14, 42, 128);
             padding: 1rem;
+            text-align: left;
 
             thead {
                 tr {
                     th {
-                        color: pink; 
+                        color: violet; 
                         text-align: left;
-                        border-bottom: 1px solid green; 
-                        padding: .5rem 0;
+                        padding: .5rem 1rem;
+                        text-transform: uppercase;
                     }
                 }
             }
-            thead {
-                tr {
+            tbody {
+                tr {                    
                     td {
-                        color: white; 
-                        padding: 1rem 0;
-                    }
-                    &:nth-child(1) {
-                        background: white;
+                        padding: .3rem 1rem;
                     }
                 }
             }
