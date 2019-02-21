@@ -5,14 +5,16 @@
     </section>
     <section>
       <h1>{{event.name}}</h1>
-      <p><!--{{event.when.year}}--> </p>
+
       <h3>
         {{event.when.date}}  {{event.when.from}} - {{event.when.to}}
       </h3>
+        <h6>{{event.when.year}}</h6>
     </section>
-    <section class="information">
-      <h2>@: {{event.where.venue}} {{event.where.adress}} </h2>
-      <p class="information">information: {{event.info}}</p>
+    <section class="Information">
+      <h2>@: {{event.where.venue}} - {{event.where.adress}} </h2>
+      <p class="information">Information:</p>
+      <p>{{event.info}}</p>
     </section>
     <section>
       <div class="grid">
@@ -65,43 +67,60 @@ export default {
 <style lang="scss">
 @import '../scss/components';
 #buy {
-.grid {
-    border: 2px solid white;
-    display: grid;
-    margin: 10% 20%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "big big big" "part1 part2 part3";
-}
+    .grid {
+        border: 2px solid white;
+        display: grid;
+        margin: 10% 20%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "big big big" "part1 part2 part3";
+        background: rgb(26, 9, 33);
+    }
 
-.part1 {
-    grid-area: part1;
-    padding: 0.2rem;
-    border-right: 1px white solid;
-}
-.part2 {
-    grid-area: part2;
-    padding: 0.2rem;
-}
-.part3 {
-    grid-area: part3;
-    padding: 0.2rem;
-    border-left: white solid 1px;
-}
-.big {
-    grid-area: big;
-    padding: 0.2rem;
-    border-bottom: 1px white solid;
-}
+    .part1 {
+        grid-area: part1;
+        padding: 0.2rem;
+        border-right: 1px white solid;
+    }
+    .part2 {
+        grid-area: part2;
+        padding: 0.2rem;
+    }
+    .part3 {
+        grid-area: part3;
+        padding: 0.2rem;
+        border-left: white solid 1px;
+    }
+    .big {
+        grid-area: big;
+        padding: 0.2rem;
+        border-bottom: 1px white solid;
+    }
+    h4 {
+        font-weight: lighter;
+        margin-bottom: 1rem;
+        border-bottom: 5px dotted rgb(26, 9, 33);
+    }
+    h1 {
+        margin: 0.5rem;
+        font-size: 2.4rem;
+    }
 
-.information {
-    margin: 0 15%;
+    .information {
+        margin: 0 10%;
+
+        p {
+            margin: 0.5rem;
+            text-align: left;
+        }
+    }
 
     p {
-        margin: 0;
-        padding: 0 1.3rem;
-        text-align: left;
+        margin: 0.3rem;
     }
-}
+
+    h6 {
+        margin: 0.5rem;
+    }
 
 }
 </style>

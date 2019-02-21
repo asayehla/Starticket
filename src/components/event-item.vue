@@ -38,24 +38,21 @@ export default {
     padding: 0;
 
     h6 {
-        margin: 0.1rem;
+        margin: 0.1rem 0;
         }
 }
-//rgb(56, 82, 158);
 .event-item {
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 25% 3fr 1fr;
     margin: 1rem;
 
-
     h1 {
-        font-size: 1.2rem;
-        margin: 0.8rem 0.1rem;
+        font-size: 1.1rem;
     }
     h2 {
         text-align: left;
-        padding: 0.3rem 0.4rem 0.1rem 0.5rem;
+        padding: 0.5rem;
         margin: 0;
     }
     p {
@@ -73,18 +70,18 @@ export default {
       border-bottom: 1px rgb(217, 217,217) solid;
     }
     .price {
-
     border-bottom: 1px rgb(217, 217,217) solid;
 
         h5 {
+
             text-align:right;
-            padding: 0 0.7rem;
-            margin-bottom: 0.3rem;
+            padding: 0 0.2rem;
+            margin-bottom: 0.2rem;
         }
         p {
             text-align: right;
-            padding: 0 0.7rem;
-            margin-bottom: 0.3rem;
+            padding: 0 0.2rem;
+            margin-bottom: 0.2rem;
         }
     }
 }

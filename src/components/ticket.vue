@@ -47,7 +47,7 @@ export default {
 <style lang="scss">
 .ticket {
     max-width: 100%;
-    margin: 3.1rem;
+    margin: 2rem;
     background: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -101,16 +101,21 @@ export default {
     p {
         font-size: 0.8rem;
         text-align: left;
-        margin-left: 1rem;
+        margin: 0.8rem 1rem;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        margin: 0.8rem 0;
     }
 
     h3 {
         text-align: left;
-        margin-left: 1rem;
+        margin: 0.8rem 1rem;
     }
     h5 {
         text-align: left;
-        margin-left: 1rem;
+        margin: 1rem;
     }
 
 }

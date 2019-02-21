@@ -34,6 +34,11 @@ export default {
 
 <style lang="scss">
 @import '../scss/components';
+#events {
+
+h1 {
+  margin: 1rem;
+}
 
 input {
   font-size: 1rem;
@@ -41,5 +46,5 @@ input {
   padding: 0.5rem 1rem;
   color: rgb(217, 217, 217);
 }
-
+}
 </style>

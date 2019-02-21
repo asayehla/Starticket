@@ -10,12 +10,11 @@ a {
       background: rgb(55,79,153);
       @extend %center;
       height: 3rem;
-      border-radius: 3px;
-      text-decoration: none; 
+      text-decoration: none;
       font-weight: 600;
       text-transform: uppercase;
       color: white;
-    
+
       &:hover {
         background: rgb(32, 62, 149);
       }
