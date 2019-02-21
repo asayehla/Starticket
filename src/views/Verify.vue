@@ -7,7 +7,7 @@
 
     <section class="verification" v-if="verification">
       <h1>{{verification}}</h1>
-      <img src="https://placekitten.com/200/200" class="ok" alt="ok /ej oki katt" @click="$router.push('/events')">
+      <!--<img src="https://placekitten.com/200/200" class="ok" alt="ok /ej oki katt" @click="$router.push('/events')">-->
     </section>
 
     <section class="verify">
@@ -46,11 +46,15 @@ export default {
 
 section {
     margin: 1rem;
-    padding-top: 1rem;
 }
 
 .verify {
-    border: black 2px solid;
+    .barcode {
+      font-size: 5.5rem;
+      width: 23.5rem;
+      text-align: center;
+      border-radius: 7px 7px 0 0;
+    }
 }
 
 .logo2 {

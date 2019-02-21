@@ -22,8 +22,8 @@
                     </tr>
                 </tbody>
             </table>
-
             <aside class="form">
+                <h3 class="add">Add New Event</h3>
                 <input type="text" class="name" placeholder="Event Name" v-model="newEvent.name">
                 <input type="text" class="venue" placeholder="Event Venue" v-model="newEvent.where.venue">
                 <input type="text" class="address" placeholder="Event Address" v-model="newEvent.where.adress">
@@ -32,8 +32,8 @@
                 <input type="text" class="to" placeholder="To" v-model="newEvent.when.to">
                 <input type="text" class="year" placeholder="Year" v-model="newEvent.when.year">
                 <input type="text" class="info" placeholder="Info" v-model="newEvent.info">
-                <input type="text" class="price" placeholder="Price" v-model="newEvent.price">
-                <input type="text" class="available" placeholder="Total Tickets" v-model="newEvent.tickets.available">
+                <input type="number" class="price" placeholder="Price" v-model="newEvent.price">
+                <input type="number" class="available" placeholder="Total Tickets" v-model="newEvent.tickets.available">
                 <a href="#" class="btn" @click="createEvent">Create event</a>
             </aside>
         </section>
@@ -49,13 +49,16 @@ export default {
             newEvent: {
                 name: '',
                 where: {
-                    venue: ''
+                    venue: '',
+                    adress: ''
                 },
                 when: {
                     date: '',
                     from: '',
                     to: '',
+                    year: ''
                 },
+                info: '',
                 price: 0,
                 tickets: {
                     available: 0,
@@ -65,23 +68,20 @@ export default {
         }
     },
     methods: {
-    async createEvent() {
-        try {
-    
-            await this.$http.post('http://localhost:3000/events', this.newEvent);
-            this.$store.dispatch('getEvents');
-        
-        } catch(err) {
-            alert('Error, unable to send new event');
-        }
-
+        async createEvent() {
+            try {
+                await this.$http.post('http://localhost:3000/events', this.newEvent);
+                this.$store.dispatch('getEvents');
+            } catch(err) {
+                alert('Error, unable to send new event');
+            }
         }
     },
-      computed: {
-    events() {
+    computed: {
+        events() {
       return this.$store.state.events;
+        }
     }
-  }
 }
 </script>
 
@@ -101,14 +101,14 @@ export default {
         grid-gap: 1rem;
 
         table {
-            background: rgb(14, 42, 128);
+            background: rgb(0,0,65);
             padding: 1rem;
             text-align: left;
 
             thead {
                 tr {
                     th {
-                        color: violet; 
+                        color: rgb(234, 171, 234); 
                         text-align: left;
                         padding: .5rem 1rem;
                         text-transform: uppercase;
@@ -130,9 +130,10 @@ export default {
         display: grid;
         grid-gap: .5rem;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem; 
+        grid-template-rows: 3rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem; 
         grid-template-areas: 
-        "hej hej"
+        "add add"
+        "attend attend"
         "venue venue"
         "address address"
         "date date"
@@ -146,46 +147,52 @@ export default {
             width: 100%;
             background: none; 
             box-sizing: border-box;
-            border: 1px solid red; 
+            border: 1px solid lightgray; 
             border-radius: 3px;
-            padding: .25rem;
+            padding: .85rem;
             font-size: 1.2rem;
-            color: white;
+            color: whitesmoke;
         }
-            
-            .name { 
-                grid-area: hej; 
-            }
-            .venue { 
-                grid-area: venue; 
-            }
-            .address { 
-                grid-area: address; 
-            }
-            .date { 
-                grid-area: date; 
-            }
-            .from { 
-                grid-area: from; 
-            }
-            .to {
-                grid-area: to; 
-            }
-            .info { 
-                grid-area: info; 
-            }
-            .price { 
-                grid-area: price; 
-            }
-            .available { 
-                grid-area: tickets; 
-            }
-            .btn {
-                grid-area: btn;
-            }
-            .year {
-                grid-area: year;
-            }
+        .add {
+            grid-area: add;
+            margin: 10px;
+            text-align: left;
+            color: rgb(234, 171, 234);
         }
+
+        .name { 
+            grid-area: attend;
+        }
+        .venue { 
+            grid-area: venue; 
+        }
+        .address { 
+            grid-area: address; 
+        }
+        .date { 
+            grid-area: date; 
+        }
+        .from { 
+            grid-area: from; 
+        }
+        .to {
+            grid-area: to; 
+        }
+        .info { 
+            grid-area: info; 
+        }
+        .price { 
+            grid-area: price; 
+        }
+        .available { 
+            grid-area: tickets; 
+        }
+        .btn {
+            grid-area: btn;
+        }
+        .year {
+            grid-area: year;
+        }
+    }
 }
 </style>

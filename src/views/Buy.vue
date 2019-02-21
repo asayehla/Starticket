@@ -89,66 +89,65 @@ export default {
         }
   }
 
-    .grid {
-        border: 2px solid white;
-        display: grid;
-        margin: 10% 20%;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "big big big" "part1 part2 part3";
-        background: rgb(26, 9, 33);
-    }
+  .grid {
+      border: 2px solid white;
+      display: grid;
+      margin: 10% 20%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "big big big" "part1 part2 part3";
+      background: rgb(26, 9, 33);
+  }
 
-    .part1 {
-        grid-area: part1;
-        padding: 0.2rem;
-        border-right: 1px white solid;
-    }
-    .part2 {
-        grid-area: part2;
-        padding: 0.2rem;
-    }
-    .part3 {
-        grid-area: part3;
-        padding: 0.2rem;
-        border-left: white solid 1px;
-    }
-    .big {
-        grid-area: big;
-        padding: 0.2rem;
-        border-bottom: 1px white solid;
-    }
-    h4 {
-        font-weight: lighter;
-        margin-bottom: 1rem;
-        border-bottom: 5px dotted rgb(26, 9, 33);
-    }
-    h1 {
-        margin: 0.5rem;
-        font-size: 2.4rem;
-    }
+  .part1 {
+      grid-area: part1;
+      padding: 0.2rem;
+      border-right: 1px white solid;
+  }
+  .part2 {
+      grid-area: part2;
+      padding: 0.2rem;
+  }
+  .part3 {
+      grid-area: part3;
+      padding: 0.2rem;
+      border-left: white solid 1px;
+  }
+  .big {
+      grid-area: big;
+      padding: 0.2rem;
+      border-bottom: 1px white solid;
+  }
+  h4 {
+      font-weight: lighter;
+      margin-bottom: 1rem;
+      border-bottom: 5px dotted rgb(26, 9, 33);
+  }
+  h1 {
+      margin: 0.5rem;
+      font-size: 2.4rem;
+  }
 
-    .information {
-        margin: 0 10%;
+  .information {
+      margin: 0 10%;
 
-        p {
-            margin: 0.5rem;
-            text-align: left;
-        }
-    }
+      p {
+          margin: 0.5rem;
+          text-align: left;
+      }
+  }
+  
+  .sold {
+    margin: 1rem;
+    color: white;
+    font-weight: bold;
+  }
 
-    .sold {
-      margin: 1rem;
-      color: white;
-      font-weight: bold;
-    }
+  p {
+      margin: 0.3rem;
+  }
 
-    p {
-        margin: 0.3rem;
-    }
-
-    h6 {
-        margin: 0.5rem;
-    }
-
+  h6 {
+      margin: 0.5rem;
+  }
 }
 </style>
