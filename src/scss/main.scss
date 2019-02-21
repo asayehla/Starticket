@@ -17,14 +17,11 @@ body {
 }
 
 #nav {
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex: 1;
+  padding: 20px;
 
   a {
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: lighter;
     color: rgb(211,211,211);
 
     &.router-link-exact-active {

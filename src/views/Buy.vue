@@ -3,19 +3,19 @@
     <section v-if="event">
       <h4 class="intro">Let's buy some tickets!</h4>
     </section>
+
     <section>
       <h1>{{event.name}}</h1>
-
-      <h3>
-        {{event.when.date}}  {{event.when.from}} - {{event.when.to}}
-      </h3>
-        <h6>{{event.when.year}}</h6>
+      <h3>{{event.when.date}}  {{event.when.from}} - {{event.when.to}}</h3>
+      <h6>{{event.when.year}}</h6>
     </section>
+
     <section class="Information">
       <h2>@: {{event.where.venue}} - {{event.where.adress}} </h2>
       <p class="information">Information:</p>
       <p>{{event.info}}</p>
     </section>
+
     <section>
       <div class="grid">
         <div class="big">
@@ -32,7 +32,10 @@
         </div>
       </div>
     </section>
-    <a href="#" class="btn" @click="buy">Take my money!</a>
+
+    <section>
+        <a href="#" class="btn" @click="buy">Take my money!</a>
+    </section>
   </main>
 </template>
 
@@ -67,6 +70,20 @@ export default {
 <style lang="scss">
 @import '../scss/components';
 #buy {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  section {
+
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 1rem 2rem;
+        }
+  }
+
     .grid {
         border: 2px solid white;
         display: grid;

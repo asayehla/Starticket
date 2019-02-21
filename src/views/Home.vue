@@ -6,6 +6,9 @@
     <section>
       <a href="#" @click="$router.push('/events')"><h1>Go to Events!</h1></a>
     </section>
+    <section id="nav">
+      <router-link to="/tickets">Go to Tickets!</router-link>
+    </section>
   </main>
 </template>
 
@@ -19,29 +22,23 @@ export default {
 @import '../scss/components';
 
 #home {
-  display: flex;
-  flex-direction: column;
-  padding-top: 7rem;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
 
-  section {
-    flex: 1;
-    @extend %center;
-  }
-  h1 {
-    padding-top: 3rem;
-    // font-size: 3rem;
-    // color: rgb(107,51,101);
-    // font-weight: bold;
-    // text-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
-  }
-  img {
-    width: 16rem;
-  }
-  // &:last-child {
-  //   align-items: flex-end;
-  //   padding: 1rem;
-  // }
+    section {
 
+        &:last-child {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+        }
+    }
+    img {
+        margin-top: 4rem;
+        width: 12rem;
+        border: white 2px solid;
+        border-radius: 5px;
+    }
 }
-
 </style>
