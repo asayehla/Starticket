@@ -8,7 +8,6 @@
     <section class="verification" v-if="verification">
       <h1>{{verification}}</h1>
       <img src="https://placekitten.com/200/200" class="ok" alt="ok /ej oki katt" @click="$router.push('/events')">
-
     </section>
 
     <section class="verify">
@@ -39,7 +38,6 @@ export default {
       await this.$store.dispatch('verifyTicket', this.code);
     }
   }
-
 }
 </script>
 

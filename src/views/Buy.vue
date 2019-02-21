@@ -1,21 +1,23 @@
-  <template>
+<template>
   <main id="buy">
     <section v-if="event">
       <h4 class="intro">Let's buy some tickets!</h4>
     </section>
-
-    <section>
+    <section class="soldOut" v-if='!works'>
+      <h1>Sold out, try a lower amount of tickets</h1>
+    </section>
+    <section v-if='works'>
       <h1>{{event.name}}</h1>
-      <h3>{{event.when.date}}  {{event.when.from}} - {{event.when.to}}</h3>
+      <h3>
+        {{event.when.date}}  {{event.when.from}} - {{event.when.to}}
+      </h3>
       <h6>{{event.when.year}}</h6>
     </section>
-
-    <section class="Information">
+    <section class="Information" v-if='works'>
       <h2>@: {{event.where.venue}} - {{event.where.adress}} </h2>
       <p class="information">Information:</p>
       <p>{{event.info}}</p>
     </section>
-
     <section>
       <div class="grid">
         <div class="big">
@@ -32,10 +34,7 @@
         </div>
       </div>
     </section>
-
-    <section>
-        <a href="#" class="btn" @click="buy">Take my money!</a>
-    </section>
+    <a href="#" class="btn" @click="buy">Take my money!</a>
   </main>
 </template>
 
@@ -45,6 +44,7 @@ export default {
   data() {
     return {
       amount: 1,
+      works: true
     }
   },
   components: {
@@ -52,11 +52,15 @@ export default {
   },
   methods: {
     buy() {
-      this.$store.dispatch('buy', {
+      if (this.amount > this.event.tickets.available - this.event.tickets.sold) {
+        this.works = false;
+      } else {
+        this.$store.dispatch('buy', {
         event: this.event._id,
         amount: this.amount
-      });
-      this.$router.push('/tickets');
+        });
+        this.$router.push('/tickets');
+      }
     }
   },
   computed: {
