@@ -17,6 +17,7 @@
       <h2>@: {{event.where.venue}} - {{event.where.adress}} </h2>
       <p class="information">Information:</p>
       <p>{{event.info}}</p>
+      <p class="sold">Tickets available still: {{event.tickets.available - event.tickets.sold}}</p>
     </section>
     <section>
       <div class="grid">
@@ -133,6 +134,12 @@ export default {
             margin: 0.5rem;
             text-align: left;
         }
+    }
+
+    .sold {
+      margin: 1rem;
+      color: white;
+      font-weight: bold;
     }
 
     p {

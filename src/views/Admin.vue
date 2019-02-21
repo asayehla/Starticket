@@ -7,8 +7,9 @@
                     <tr>
                         <th>Name</th>
                         <th>Where</th>
-                        <th>Availabel Seats</th>
+                        <th>Total Seats</th>
                         <th>Sold Tickets</th>
+                        <th>Available Tickets</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,18 +18,22 @@
                         <td>{{event.where.venue}}</td>
                         <td>{{event.tickets.available}}</td>
                         <td>{{event.tickets.sold}}</td>
+                        <td>{{event.tickets.available - event.tickets.sold}}</td>
                     </tr>
                 </tbody>
             </table>
-        </section>
-        <section>
+
             <aside class="form">
-                <input type="text" placeholder="Event Name" v-model="newEvent.name">
-                <input type="text" placeholder="Event Location" v-model="newEvent.where.venue">
-                <input type="text" placeholder="From" v-model="newEvent.when.from">
-                <input type="text" placeholder="To" v-model="newEvent.when.to">
-                <input type="text" placeholder="Price" v-model="newEvent.price">
-                <input type="number" placeholder="Total Tickets" v-model="newEvent.tickets.available">
+                <input type="text" class="name" placeholder="Event Name" v-model="newEvent.name">
+                <input type="text" class="venue" placeholder="Event Venue" v-model="newEvent.where.venue">
+                <input type="text" class="address" placeholder="Event Address" v-model="newEvent.where.adress">
+                <input type="text" class="date" placeholder="Event Date" v-model="newEvent.when.date">
+                <input type="text" class="from" placeholder="From" v-model="newEvent.when.from">
+                <input type="text" class="to" placeholder="To" v-model="newEvent.when.to">
+                <input type="text" class="year" placeholder="Year" v-model="newEvent.when.year">
+                <input type="text" class="info" placeholder="Info" v-model="newEvent.info">
+                <input type="text" class="price" placeholder="Price" v-model="newEvent.price">
+                <input type="text" class="available" placeholder="Total Tickets" v-model="newEvent.tickets.available">
                 <a href="#" class="btn" @click="createEvent">Create event</a>
             </aside>
         </section>
@@ -80,7 +85,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="admin-style">
 #admin {
     margin: 0;
     display: flex;
@@ -88,10 +93,12 @@ export default {
     align-items: center; 
 
     .container {
-        display: flex; 
-        grid-template-columns: 4fr 1fr; 
         max-width: 1000px;
+        width: 100%;
         color: white;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
 
         table {
             background: rgb(14, 42, 128);
@@ -116,21 +123,69 @@ export default {
                 }
             }
         }
-        .form {
-            background: rgb(0,0,65);
-            padding: 1rem;
+    }
+    .form {
+        background: rgb(0,0,65);
+        padding: 1rem;
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem 2.6rem; 
+        grid-template-areas: 
+        "hej hej"
+        "venue venue"
+        "address address"
+        "date date"
+        "from to"
+        "info info"
+        "year price"
+        "tickets tickets"
+        "btn btn";
 
-            input {
-                width: 100%;
-                background: none; 
-                border: 1px solid red; 
-                border-radius: 3px;
-                padding: .25rem;
-                font-size: 1.2rem;
-                color: white;
-                margin: 0 0 1rem 0;
+        input {
+            width: 100%;
+            background: none; 
+            box-sizing: border-box;
+            border: 1px solid red; 
+            border-radius: 3px;
+            padding: .25rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+            
+            .name { 
+                grid-area: hej; 
+            }
+            .venue { 
+                grid-area: venue; 
+            }
+            .address { 
+                grid-area: address; 
+            }
+            .date { 
+                grid-area: date; 
+            }
+            .from { 
+                grid-area: from; 
+            }
+            .to {
+                grid-area: to; 
+            }
+            .info { 
+                grid-area: info; 
+            }
+            .price { 
+                grid-area: price; 
+            }
+            .available { 
+                grid-area: tickets; 
+            }
+            .btn {
+                grid-area: btn;
+            }
+            .year {
+                grid-area: year;
             }
         }
-    }
 }
 </style>
