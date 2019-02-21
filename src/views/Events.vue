@@ -1,9 +1,9 @@
 <template lang="html">
   <main id="events">
     <h1>Events</h1>
-    <input type="text" name="search" v-model="filter" placeholder="Search for Event">
+    <input type="text" v-model="search" placeholder="Search for Event">
     <section>
-      <event-item v-for="event in events" :key="event.id" :event="event" />
+      <event-item v-for="event in filterEvent" :key="event.id" :event="event" />
     </section>
   </main>
 </template>
@@ -15,7 +15,8 @@ export default {
   name:'events',
   data() {
     return {
-      filter: null
+      event: [],
+      search: ""
     }
   },
   components: {
@@ -27,6 +28,11 @@ export default {
   computed: {
     events() {
       return this.$store.state.events;
+    },
+    filterEvent: function (){
+      return this.events.filter((event) => {
+        return event.name.match(this.search)
+      });
     }
   }
 }
