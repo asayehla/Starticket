@@ -24,7 +24,7 @@
         <div class="big">
           <p>{{event.price * amount}}</p>
         </div>
-        <div class="part1" @click="amount--">
+        <div class="part1" @click="minusAmount">
           <p>-</p>
         </div>
         <div class="part2">
@@ -61,6 +61,13 @@ export default {
         amount: this.amount
         });
         this.$router.push('/tickets');
+      }
+    },
+    minusAmount(){
+      if(this.amount < 2) {
+        return 
+      } else {
+        this.amount--
       }
     }
   },
