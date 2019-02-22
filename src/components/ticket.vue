@@ -1,40 +1,40 @@
 <template>
-<article class="ticket">
-  <div class="what">
-    <p>WHAT</p>
-    <h1>{{ticket.event.name}}</h1>
-  </div>
+    <article class="ticket">
+        <div class="what">
+            <p>WHAT</p>
+            <h1>{{ticket.event.name}}</h1>
+        </div>
 
-  <div class="where">
-    <p>WHERE</p>
-    <h3>{{ticket.event.where.venue}}</h3>
-    <h5>{{ticket.event.where.adress}}</h5>
-  </div>
+        <div class="where">
+            <p>WHERE</p>
+            <h3>{{ticket.event.where.venue}}</h3>
+            <h5>{{ticket.event.where.adress}}</h5>
+        </div>
 
-  <div class="when">
-    <p>WHEN</p>
-    <h3>{{ticket.event.when.date}}</h3>
-  </div>
+        <div class="when">
+            <p>WHEN</p>
+            <h3>{{ticket.event.when.date}}</h3>
+        </div>
 
-  <div class="from">
-    <p>FROM</p>
-    <h3>{{ticket.event.when.from}}</h3>
-  </div>
+        <div class="from">
+            <p>FROM</p>
+            <h3>{{ticket.event.when.from}}</h3>
+        </div>
 
-  <div class="to">
-    <p>TO</p>
-    <h3>{{ticket.event.when.to}}</h3>
-  </div>
+        <div class="to">
+            <p>TO</p>
+            <h3>{{ticket.event.when.to}}</h3>
+        </div>
 
-  <div class="infoticket">
-    <p>INFO</p>
-    <p>{{ticket.event.info}}</p>
-  </div>
+        <div class="infoticket">
+            <p>INFO</p>
+            <p>{{ticket.event.info}}</p>
+        </div>
 
-  <div class="barcode">
-    {{ticket.code}}
-  </div>
-</article>
+        <div class="barcode">
+            {{ticket.code}}
+        </div>
+    </article>
 </template>
 
 <script>
@@ -51,7 +51,12 @@ export default {
     background: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "what what what" "where where where" "when from to" "info info info" "barcode barcode barcode";
+    grid-template-areas: 
+    "what what what" 
+    "where where where" 
+    "when from to" 
+    "info info info" 
+    "barcode barcode barcode";
     color: rgb(18, 17, 59);
     border-radius: 5px;
     box-shadow: 5px 5px 0 0 rgb(153, 127, 171), 10px 10px 0 0 rgb(103, 51, 121), 5px 5px 0 5px rgba(0,0,0,0);

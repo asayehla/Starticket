@@ -1,7 +1,7 @@
 <template lang="html">
   <main class="container">
     <section class="logo2">
-      <img src="/starticketlogo.png" alt="Logo">
+      <img src="../assets/starticketlogo.png" alt="Logo">
       <h1>STAFF</h1>
     </section>
     <section class="verify">

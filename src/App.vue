@@ -1,16 +1,16 @@
 <template>
-<div id="app">
-  <transition name="fade">
-    <router-view />
-  </transition>
-</div>
+  <div id="app">
+    <transition name="fade">
+      <router-view />
+    </transition>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'App',
 
-  //before the page load this function connects to store, gets API.
+  //before the page load this function connects to store and gets the API
   beforeMount() {
     this.$store.dispatch('getEvents');
   }
@@ -24,7 +24,6 @@ export default {
 .fade-leave-active {
     transition: opacity 0.25s ease-out;
 }
-
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
