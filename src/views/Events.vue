@@ -22,9 +22,6 @@ export default {
   components: {
     eventItem
   },
-  methods: {
-
-  },
   computed: {
     events() {
       return this.$store.state.events;

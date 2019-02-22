@@ -33,7 +33,6 @@ export default new Vuex.Store({
     //get events from API
     async getEvents(ctx) {
       let events = await axios.get('http://localhost:3000/events');
-      //console.log(events)
       ctx.commit('setEvents', events.data);
     },
     async buy(ctx, buyData) {
