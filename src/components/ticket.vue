@@ -51,17 +51,10 @@ export default {
     background: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "what what what"
-     "where where where"
-     "when from to"
-     "info info info"
-     "barcode barcode barcode";
+    grid-template-areas: "what what what" "where where where" "when from to" "info info info" "barcode barcode barcode";
     color: rgb(18, 17, 59);
     border-radius: 5px;
-    box-shadow: 5px 5px 0 0 rgb(153, 127, 171),
-     10px 10px 0 0 rgb(103, 51, 121),
-     5px 5px 0 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 0 0 rgb(153, 127, 171), 10px 10px 0 0 rgb(103, 51, 121), 5px 5px 0 5px rgba(0,0,0,0);
 
     .what {
         grid-area: what;

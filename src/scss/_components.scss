@@ -1,4 +1,5 @@
-%center {
+
+%center{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,9 +17,6 @@ a {
       color: white;
       border-radius: 5px;
 
-      &:hover {
-        background: rgb(32, 62, 149);
-      }
       &:active {
         background: #222;
       }

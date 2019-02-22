@@ -13,21 +13,18 @@ export default {
     ticket
   },
   computed: {
-    tickets(){
+    tickets() {
       return this.$store.state.tickets;
     }
   },
   beforeMount() {
-    if(localStorage.getItem('tickets')){
+    if (localStorage.getItem('tickets')) {
       this.$store.dispatch('getTickets');
     }
   }
 }
-
 </script>
 
 <style lang="scss">
 @import '../scss/components';
-
-
 </style>

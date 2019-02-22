@@ -5,8 +5,7 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -14,27 +13,32 @@ export default new Router({
     {
       path: '/events',
       name: 'events',
-      component: () => import('./views/Events.vue')
-    },
-     {
-      path: '/buy',
-      name: 'buy',
-      component: () => import('./views/Buy.vue')
+      component: () =>
+        import('./views/Events.vue')
     },
     {
-     path: '/tickets',
-     name: 'tickets',
-     component: () => import('./views/Tickets.vue')
-   },
-   {
-     path: '/verify',
-     name: 'verify',
-     component: () => import('./views/Verify.vue')
-   },
-   {
-     path: '/admin',
-     name: 'admin',
-     component: () => import('./views/Admin.vue')
-   }
+      path: '/buy',
+      name: 'buy',
+      component: () =>
+        import('./views/Buy.vue')
+    },
+    {
+      path: '/tickets',
+      name: 'tickets',
+      component: () =>
+        import('./views/Tickets.vue')
+    },
+    {
+      path: '/verify',
+      name: 'verify',
+      component: () =>
+        import('./views/Verify.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () =>
+        import('./views/Admin.vue')
+    }
   ]
 })

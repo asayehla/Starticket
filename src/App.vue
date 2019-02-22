@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    <transition name="fade">
-      <router-view />
-    </transition>
-  </div>
+<div id="app">
+  <transition name="fade">
+    <router-view />
+  </transition>
+</div>
 </template>
 
 <script>
@@ -20,11 +20,13 @@ export default {
 <style lang="scss">
 @import 'scss/main';
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
     transition: opacity 0.25s ease-out;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
     opacity: 0;
 }
 </style>

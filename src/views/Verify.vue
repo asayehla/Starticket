@@ -1,12 +1,12 @@
 <template lang="html">
-  <main>
+  <main class="container">
     <section class="logo2">
-      <img src="https://placekitten.com/100/100" alt="Logo" @click="$router.push('/events')">
+      <img src="/starticketlogo.png" alt="Logo">
       <h1>STAFF</h1>
     </section>
     <section class="verify">
       <input type="text" class="barcode" name="code" :value="code.toUpperCase()" @input="code =$event.target.value.toUpperCase()" :maxlength="codeLength" />
-      <a href="#" class="btn" @click="verifyTicket"><h2>Verify ticket</h2></a>
+      <a href="#" id="vbtn" class="btn" @click="verifyTicket"><h2>Verify ticket</h2></a>
     </section>
     <section class="verification" v-if="verification">
       <h1 id="not">{{verification}}</h1>
@@ -39,29 +39,47 @@ export default {
 <style lang="scss">
 @import '../scss/components';
 
-section {
-    margin: 1rem;
-}
-
 #not {
-  border-bottom: dotted 8px rgb(205,172,255);;
+    margin: 0.7rem 0.3rem ;
+    border-bottom: dotted 8px rgb(205,172,255);
 }
 
 .verify {
     .barcode {
-      font-size: 5.5rem;
-      width: 23.5rem;
+        font-size: 4rem;
+        text-align: center;
+        border-radius: 7px 7px 0 0;
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 85%;
+    }
+    #vbtn {
+      border-radius: 0;
       text-align: center;
-      border-radius: 7px 7px 0 0;
+        width: 99%;
+        padding: 0.1rem;
     }
 }
 
 .logo2 {
-    margin-top: 3rem;
+    img {
+        margin-top: 1rem;
+        height: 8rem;
+    }
+    h1 {
+      margin: 0.7rem;
+    }
+
 }
 
 .ok {
     margin-bottom: 3rem;
     border-radius: 50%;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>

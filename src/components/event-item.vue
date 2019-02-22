@@ -39,7 +39,7 @@ export default {
 
     h6 {
         margin: 0.1rem 0;
-        }
+    }
 }
 .event-item {
     border-radius: 5px;
@@ -66,15 +66,15 @@ export default {
         }
 
     }
-    .nameVenue{
-      border-bottom: 1px rgb(217, 217,217) solid;
+    .nameVenue {
+        border-bottom: 1px rgb(217, 217,217) solid;
     }
     .price {
-    border-bottom: 1px rgb(217, 217,217) solid;
+        border-bottom: 1px rgb(217, 217,217) solid;
 
         h5 {
 
-            text-align:right;
+            text-align: right;
             padding: 0 0.2rem;
             margin-bottom: 0.2rem;
         }
